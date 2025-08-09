@@ -1,13 +1,14 @@
 <script>
 	import { onMount } from 'svelte';
 	import Glide from '@glidejs/glide';
+	import { Calendar, Tv, Radio, Camera } from 'lucide-svelte';
 
 	let glideElement;
 	let glideInstance;
 
 	const channels = [
-		{ name: 'Lihat Jadwal', icon: '📺', bgColor: 'bg-orange-500' },
-		{ name: 'Daftar Channel', icon: '📺', bgColor: 'bg-purple-600' },
+		{ name: 'Lihat Jadwal', icon: 'calendar', bgColor: 'bg-orange-500' },
+		{ name: 'Daftar Channel', icon: 'tv', bgColor: 'bg-purple-600' },
 		{ name: 'SCTV', icon: 'SCTV', bgColor: 'bg-blue-500' },
 		{ name: 'Indosiar', icon: 'IND', bgColor: 'bg-yellow-500' },
 		{ name: 'Moji', icon: 'MOJI', bgColor: 'bg-blue-400' },
@@ -51,11 +52,15 @@
 				<ul class="glide__slides">
 					{#each channels as channel}
 						<li class="glide__slide">
-							<div class="group flex cursor-pointer flex-col items-center">
+							<div class="flex cursor-pointer flex-col items-center">
 								<div
-									class="h-16 w-16 {channel.bgColor} mb-2 flex items-center justify-center rounded-full transition-transform group-hover:scale-110"
+									class="h-16 w-16 {channel.bgColor} my-4 mb-2 flex items-center justify-center rounded-full transition-transform hover:scale-110"
 								>
-									{#if channel.icon.length > 2}
+									{#if channel.icon === 'calendar'}
+										<Calendar size={24} color="white" />
+									{:else if channel.icon === 'tv'}
+										<Tv size={24} color="white" />
+									{:else if channel.icon.length > 2}
 										<span class="text-xs font-bold text-white">{channel.icon}</span>
 									{:else}
 										<span class="text-2xl">{channel.icon}</span>

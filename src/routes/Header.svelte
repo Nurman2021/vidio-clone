@@ -1,5 +1,6 @@
 <script>
 	import { page } from '$app/stores';
+	import { ChevronDown, Search, User, Menu } from 'lucide-svelte';
 
 	let searchQuery = '';
 	let isMenuOpen = false;
@@ -25,14 +26,7 @@
 					>
 					<span
 						class="flex cursor-pointer items-center text-white transition-colors hover:text-red-400"
-						>Lainnya <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="m19 9-7 7-7-7"
-							></path>
-						</svg>
+						>Lainnya <ChevronDown size={16} />
 					</span>
 				</nav>
 			</div>
@@ -47,14 +41,7 @@
 						class=" w-[25rem] rounded-lg bg-[#26292e] px-4 py-2 text-sm text-white focus:ring-2 focus:ring-red-500 focus:outline-none"
 					/>
 					<button class="absolute top-2 right-2 text-gray-400 hover:text-white" aria-label="Search">
-						<svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="m21 21-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-							></path>
-						</svg>
+						<Search size={20} />
 					</button>
 				</div>
 
@@ -68,23 +55,10 @@
 					<div class="relative">
 						<button class="flex items-center space-x-2 text-white hover:text-red-400">
 							<div class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-600">
-								<svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
-									<path
-										fill-rule="evenodd"
-										d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-										clip-rule="evenodd"
-									></path>
-								</svg>
+								<User size={20} />
 							</div>
 							<span>Masuk</span>
-							<svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="m19 9-7 7-7-7"
-								></path>
-							</svg>
+							<ChevronDown size={16} />
 						</button>
 					</div>
 				</div>
@@ -97,14 +71,7 @@
 					class="text-white hover:text-red-400 focus:outline-none"
 					aria-label="Toggle mobile menu"
 				>
-					<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							d="M4 6h16M4 12h16M4 18h16"
-						></path>
-					</svg>
+					<Menu size={24} />
 				</button>
 			</div>
 		</div>

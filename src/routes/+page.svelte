@@ -5,6 +5,7 @@
 	import ContentSection from './components/ContentSection.svelte';
 	import VideoModal from './components/VideoModal.svelte';
 	import SkeletonLoader from './components/SkeletonLoader.svelte';
+	import { ShoppingCart, CreditCard } from 'lucide-svelte';
 
 	let showVideoModal = false;
 	let currentVideo = null;
@@ -237,6 +238,11 @@
 				on:playVideo={(e) => openVideoModal(e.detail)}
 			/>
 
+			<img
+				src="https://thumbor.prod.vidiocdn.com/pRwmOOsvnb5mD2pk73W67AAD0vM=/1200x142/filters:quality(80)/vidio-web-prod-breaking-banner/uploads/breaking_banner/image/6023/b28973.jpg"
+				alt="ads"
+			/>
+
 			<!-- Recently Added -->
 			<ContentSection
 				title="Recently Added"
@@ -246,7 +252,7 @@
 			/>
 
 			<!-- Sports Packages -->
-			<!-- <div class="my-8 rounded-lg bg-gradient-to-r from-yellow-600 to-red-600 p-6">
+			<div class="my-8 rounded-lg bg-gradient-to-r from-yellow-600 to-red-600 p-6">
 				<h2 class="mb-4 text-2xl font-bold">Bebas Pilih Paket Sesukamu</h2>
 				<div class="grid grid-cols-1 gap-4 md:grid-cols-3">
 					<div class="bg-opacity-30 rounded-lg bg-black p-4">
@@ -254,14 +260,24 @@
 						<p class="text-2xl font-bold text-yellow-400">5 Match Eksklusif Superstar</p>
 						<p class="text-sm">Knockout King of The Ring</p>
 						<div class="mt-2 text-3xl font-bold text-yellow-400">29.000</div>
-						<button class="mt-2 rounded bg-red-600 px-4 py-2 text-white">Beli Sekarang</button>
+						<button
+							class="mt-2 flex items-center space-x-2 rounded bg-red-600 px-4 py-2 text-white transition-colors hover:bg-red-700"
+						>
+							<ShoppingCart size={16} />
+							<span>Beli Sekarang</span>
+						</button>
 					</div>
 					<div class="bg-opacity-30 rounded-lg bg-black p-4">
 						<h3 class="font-bold text-yellow-400">Nonton Tayangan</h3>
 						<p class="text-2xl font-bold text-yellow-400">4 Match Eksklusif</p>
 						<p class="text-sm">HW SPORT NIGHT BALI</p>
 						<div class="mt-2 text-3xl font-bold text-yellow-400">29.000</div>
-						<button class="mt-2 rounded bg-red-600 px-4 py-2 text-white">Beli Sekarang</button>
+						<button
+							class="mt-2 flex items-center space-x-2 rounded bg-red-600 px-4 py-2 text-white transition-colors hover:bg-red-700"
+						>
+							<ShoppingCart size={16} />
+							<span>Beli Sekarang</span>
+						</button>
 					</div>
 					<div class="bg-opacity-30 rounded-lg bg-black p-4">
 						<h3 class="font-bold text-yellow-400">LEBIH DARI 70 SPORTS</h3>
@@ -269,15 +285,15 @@
 						<div class="mt-2 text-3xl font-bold text-yellow-400">
 							15.1 <span class="text-lg">JT</span>
 						</div>
-						<button class="mt-2 rounded bg-red-600 px-4 py-2 text-white">Langganan Sekarang</button>
+						<button
+							class="mt-2 flex items-center space-x-2 rounded bg-red-600 px-4 py-2 text-white transition-colors hover:bg-red-700"
+						>
+							<CreditCard size={16} />
+							<span>Langganan Sekarang</span>
+						</button>
 					</div>
 				</div>
-			</div> -->
-
-			<img
-				src="https://thumbor.prod.vidiocdn.com/pRwmOOsvnb5mD2pk73W67AAD0vM=/1200x142/filters:quality(80)/vidio-web-prod-breaking-banner/uploads/breaking_banner/image/6023/b28973.jpg"
-				alt="ads"
-			/>
+			</div>
 
 			<!-- Continue Watching -->
 			<ContentSection

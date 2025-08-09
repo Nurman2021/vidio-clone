@@ -28,6 +28,7 @@
 	"dependencies": {
 		"@glidejs/glide": "^3.7.1",
 		"lottie-web": "^5.13.0",
+		"lucide-svelte": "^0.539.0",
 		"video.js": "^8.23.4"
 	}
 }

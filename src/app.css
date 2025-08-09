@@ -2,3 +2,22 @@
 @import '@fontsource/fira-mono';
 @import '@glidejs/glide/dist/css/glide.core.min.css';
 @import 'video.js/dist/video-js.css';
+
+/* Custom hover effects */
+.hover-container:hover img {
+	transform: scale(1.05);
+}
+
+.hover-container:hover .hover-overlay {
+	opacity: 1;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.hover-container .hover-play-button {
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.hover-container:hover .hover-play-button {
+	opacity: 1;
+}
