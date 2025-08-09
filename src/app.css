@@ -1,0 +1,4 @@
+@import 'tailwindcss';
+@import '@fontsource/fira-mono';
+@import '@glidejs/glide/dist/css/glide.core.min.css';
+@import 'video.js/dist/video-js.css';
